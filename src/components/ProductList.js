@@ -13,7 +13,7 @@ export default function ProductList() {
     useEffect(() => {
         fetch('https://dummyjson.com/products')
             .then(res => res.json())
-            .then(data => setProducts(data.products.splice(0,30)))
+            .then(data => setProducts(data.products.splice(0,10)))
     }, [])
 
     console.log(products)
@@ -26,7 +26,7 @@ export default function ProductList() {
                     <h2>to the discount store</h2>
                 </div>
                 <div className='imageBlur'>
-                    <img src={products[0].thumbnail} />
+                    <img src={products.length > 0 ? products[0].thumbnail: ''} />
                 </div>
             </div>
             <h1>Shop All Products</h1>

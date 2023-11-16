@@ -6,9 +6,9 @@ export default function Cart() {
     const items = useSelector(state => state.cart.items)
     const dispatch = useDispatch()
       
-    const handleRemoveFromCart = itemId => {
-        dispatch(removeFromCart(itemId));
-      };
+    // const handleRemoveFromCart = itemId => {
+    //     dispatch(removeFromCart(itemId));
+    //   };
 
     let subtotal = 0
     for (var i = 0; i < items.length; i++) {
@@ -38,7 +38,7 @@ export default function Cart() {
                             <div>
                                 <p>Quantity: 1</p>
                                 <p>Subtotal: ${(item.price*(1-item.discountPercentage/100)).toFixed(2)}</p>
-                                <button onClick={() => handleRemoveFromCart(item.id)}>delete</button>
+                                {/* <button onClick={() => handleRemoveFromCart(item.id)}>delete</button> */}
                             </div>
                         </div>
                     )
