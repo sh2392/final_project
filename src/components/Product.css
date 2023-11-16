@@ -1,0 +1,68 @@
+.product {
+    width: 100%;
+    margin: 1.5rem;
+    display: flex;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.imgSlider {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.imgSlider img {
+    width: 100%;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productInfo p {
+    margin: 0;
+    color: rgb(112, 110, 110);
+}
+
+h2 {
+    margin: 0.2rem 0
+}
+
+h4 {
+    margin: 0.3rem 0
+}
+
+.product button {
+    margin: 0.3rem 0;
+    background-color: #131921;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: darkgrey;
+    content: 'Added';
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#brand {
+    text-decoration: underline;
+    color: rgb(97, 97, 97);
+}
+
+select {
+    width: 100px;
+    height: 40px;
+}

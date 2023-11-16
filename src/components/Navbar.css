@@ -1,0 +1,22 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #131921;
+    color: white;
+}
+
+.nav_right {
+    display: flex;
+}
+
+nav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background-color: darkgray;
+}
