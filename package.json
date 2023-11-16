@@ -1,7 +1,6 @@
 {
   "name": "final_project",
   "version": "0.1.0",
-  "homepage": "https://sh2392.github.io/final_project/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -19,7 +18,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node set-homepage.js && react-scripts build",
+    "set-homepage": "echo 'Setting homepage for production build' && node set-homepage.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -40,5 +40,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://sh2392.github.io/final_project/"
 }
