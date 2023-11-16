@@ -23,8 +23,10 @@ function App() {
     }
   },[])
 
+  const basename = process.env.NODE_ENV === 'production' ? '/final_project' : ''
+
   return (
-    <Router>
+    <Router basename={basename}>
       <ProductListContext.Provider value={{products, setProducts}}>
         <ProductContext.Provider value={{selectedProduct, setSelectedProduct}}>
           <div className="App">
