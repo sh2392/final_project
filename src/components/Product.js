@@ -44,7 +44,11 @@ export default function Product() {
                     <ReactStars readOnly={true} showNumaric={true} count={5} value={selectedProduct.rating} size={20} activeColor='#ffd700'/>
                     <p>{selectedProduct.rating}</p>
                 </div>
-                <h4>${selectedProduct.price}</h4>
+                <h4>
+                    <span className='oldPrice'>${selectedProduct.price}</span>
+                    <span>${(selectedProduct.price*(1-selectedProduct.discountPercentage/100)).toFixed(2)}</span>
+                </h4>
+                <span className='discount'>{selectedProduct.discountPercentage}% OFF</span>
                 <p>Description:<br />{selectedProduct.description}</p>
                 
                 <label htmlFor="quantity">Quantity:</label>
